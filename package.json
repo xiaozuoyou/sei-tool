@@ -1,0 +1,11 @@
+{
+  "name": "sei",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@cosmjs/stargate": "^0.32.1",
+    "@sei-js/core": "^3.1.2"
+  }
+}
