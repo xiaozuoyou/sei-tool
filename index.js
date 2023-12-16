@@ -11,8 +11,8 @@ export const NETWORK = "pacific-1";
 
 const mnemonic = "" // 这里填写助记词
 
-const generateWalletFromMnemonic = async (mnemonic) => {
-  const wallet = await restoreWallet(mnemonic, 0);
+const generateWalletFromMnemonic = async (m) => {
+  const wallet = await restoreWallet(m, 0);
   return wallet;
 };
 
