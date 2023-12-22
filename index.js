@@ -9,7 +9,7 @@ export const RPC_URL = "https://sei-rpc.polkachu.com/";
 export const REST_URL = "https://sei-api.polkachu.com/";
 export const NETWORK = "pacific-1";
 
-const mnemonic = "" // 这里填写助记词
+const mnemonic = "" // female voice yellow rate away burger been again spend dynamic seed squirrel
 
 const generateWalletFromMnemonic = async (m) => {
   const wallet = await restoreWallet(m, 0);
@@ -41,7 +41,8 @@ async function main() {
 
   const signingCosmWasmClient = await getSigningCosmWasmClient(RPC_URL, wallet);
 
-  for (let i = 0; i < 1000; i++) {
+ for (let i = 0; i < 10000; i++) {
+	try{
     const response = await signingCosmWasmClient.sendTokens(
       accounts[0].address,
       accounts[0].address,
@@ -51,7 +52,9 @@ async function main() {
     );
 
     console.log(response.transactionHash);
-  }
+  	}catch(error){
+		console.log(error)
+}
 }
 
 main();
